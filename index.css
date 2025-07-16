@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#controls input, #controls button {
+  padding: 8px 10px;
+  font-size: 16px;
+  margin: 4px;
+}
+
+.active-view {
+  background-color: #007bff;
+  color: white;
+}
+
+#search-results.grid, #bookshelf.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+#search-results.list, #bookshelf.list {
+  display: block;
+}
+
+.book {
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  width: 150px;
+}
+
+#search-results.list .book, #bookshelf.list .book {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.book img {
+  max-height: 120px;
+  margin-bottom: 6px;
+}
+
+#pagination {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#pagination button {
+  margin: 2px;
+  padding: 6px 10px;
+  cursor: pointer;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+
+#pagination button.active {
+  background: #007bff;
+  color: white;
+}
+
+#book-details {
+  margin-top: 25px;
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.hidden {
+  display: none;
+}

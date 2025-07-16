@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Finder</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+</head>
+<body>
+
+  <h1>Book Finder</h1>
+
+  <div id="controls">
+    <input type="text" id="search-box" placeholder="Search for books..." />
+    <button id="search-btn">Search</button>
+    <button id="grid-view" class="active-view">Grid</button>
+    <button id="list-view">List</button>
+    <button id="toggle-bookshelf">Bookshelf</button>
+  </div>
+
+  <div id="search-section">
+    <div id="search-results" class="grid"></div>
+    <div id="pagination"></div>
+  </div>
+
+  <div id="book-details"></div>
+
+  <div id="bookshelf-section" class="hidden">
+    <h3>Your Bookshelf</h3>
+    <div id="bookshelf" class="grid"></div>
+  </div>
+
+  <!-- Mustache Templates -->
+  <script id="book-template" type="x-tmpl-mustache">
+    <div class="book" data-id="{{id}}" data-title="{{title}}" data-authors="{{authors}}" data-desc="{{description}}" data-link="{{infoLink}}">
+      {{#thumbnail}}<img src="{{thumbnail}}" alt="cover" />{{/thumbnail}}
+      <p>{{title}}</p>
+    </div>
+  </script>
+
+  <script id="book-detail-template" type="x-tmpl-mustache">
+    <h3>{{title}}</h3>
+    <p><strong>Authors:</strong> {{authors}}</p>
+    <p>{{description}}</p>
+    <a href="{{infoLink}}" target="_blank">More info</a>
+  </script>
+
+  <script src="index.js"></script>
+</body>
+</html>
+
+
